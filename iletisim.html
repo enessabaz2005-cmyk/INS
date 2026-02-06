@@ -10,6 +10,7 @@
     <link rel="manifest" href="logo1.png">
     <meta name="theme-color" content="#ffffff">
     <title>Fırat İnşaat | İletişim</title>
+
     <style>
         /* GENEL AYARLAR */
         * {
@@ -76,7 +77,7 @@
             color: #ff6600;
         }
 
-        /* İLETİŞİM BÖLÜMÜ */
+        /* İLETİŞİM */
         .contact {
             padding: 80px 10%;
             background-color: #ffffff;
@@ -97,7 +98,6 @@
         .contact-info h2 {
             font-size: 2.5rem;
             margin-bottom: 25px;
-            color: #333;
         }
 
         .contact-info p {
@@ -115,7 +115,7 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.08);
         }
 
-        /* INSTAGRAM KISMI */
+        /* SOSYAL */
         .social {
             margin-top: 40px;
             text-align: center;
@@ -124,7 +124,6 @@
         .social h3 {
             margin-bottom: 20px;
             font-size: 1.5rem;
-            color: #333;
         }
 
         .social-icons {
@@ -134,7 +133,6 @@
         }
 
         .social-icons a {
-            display: inline-block;
             width: 50px;
             height: 50px;
             background-color: #fff;
@@ -143,84 +141,100 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ff6600;
-            font-size: 1.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .social-icons a:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
+        /* ===== SADECE MOBİL UYUMLULUK ===== */
+        @media (max-width: 768px) {
 
-        /* Mobil uyumluluk */
-        @media (max-width: 900px) {
-            .contact-container {
-                gap: 30px;
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav ul li a {
+                font-size: 0.85rem;
+            }
+
+            .contact {
+                padding: 60px 5%;
+            }
+
+            .contact-info h2 {
+                font-size: 2rem;
+            }
+
+            .contact-info p {
+                font-size: 1rem;
             }
 
             .map-container {
-                height: 300px;
+                height: 280px;
+            }
+
+            .social h3 {
+                font-size: 1.3rem;
             }
         }
     </style>
-    <!-- Instagram icon için Font Awesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <header>
-        <div class="nav-logo">
-            <img src="logo1.png" alt="Fırat İnşaat Logo">
-            <span>FIRAT İNŞAAT</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                <li><a href="projelerimiz.html">Projelerimiz</a></li>
-                <li><a href="iletisim.html">İletişim</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- İLETİŞİM BÖLÜMÜ -->
-    <section class="contact">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>İletişim</h2>
-                <p>Adres: istanbul</p>
-                <p>Telefon: +999999999999</p>
-                <p>Email: 000000000000</p>
-                <p>Bizimle sosyal medyadan da iletişime geçebilirsiniz.</p>
-            </div>
-
-            <!-- HARİTA -->
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!4v1770325177918!6m8!1m7!1sAFc3cCYhhBXcLG219nxU4w!2m2!1d41.00392135827349!2d29.08558387246419!3f262.3546168570854!4f-11.800746287314496!5f0.7820865974627469" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
-           <!-- INSTAGRAM -->
-<div class="social">
-    <h3>Instagram</h3>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/firatyapi.insaat/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style="width:40px; height:40px;">
-        </a>
-       
+<header>
+    <div class="nav-logo">
+        <img src="logo1.png" alt="Fırat İnşaat Logo">
+        <span>FIRAT İNŞAAT</span>
     </div>
-</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="projelerimiz.html">Projelerimiz</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+</header>
 
-    </section>
+<section class="contact">
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h2>İletişim</h2>
+            <p>Adres: İstanbul</p>
+            <p>Telefon: +999999999999</p>
+            <p>Email: 000000000000</p>
+            <p>Bizimle sosyal medyadan da iletişime geçebilirsiniz.</p>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!4v1770325177918!6m8!1m7!1sAFc3cCYhhBXcLG219nxU4w!2m2!1d41.00392135827349!2d29.08558387246419!3f262.3546168570854!4f-11.800746287314496!5f0.7820865974627469"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="social">
+            <h3>Instagram</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/firatyapi.insaat/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style="width:40px;height:40px;">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 </body>
 </html>
