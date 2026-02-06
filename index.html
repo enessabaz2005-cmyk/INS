@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="icon" type="image/x-icon" href="logo1.png">
     <link rel="apple-touch-icon" sizes="180x180" href="logo1.png">
     <link rel="icon" type="image/png" sizes="32x32" href="logo1.png">
     <link rel="icon" type="image/png" sizes="16x16" href="logo1.png">
-
+    <link rel="manifest" href="logo1.png">
+    <meta name="theme-color" content="#ffffff">
     <title>Fırat İnşaat</title>
 
     <style>
-        /* GENEL */
+        /* GENEL AYARLAR */
         * {
             margin: 0;
             padding: 0;
@@ -79,18 +79,38 @@
 
         /* HERO */
         .hero {
-            min-height: 85vh;
+            height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(120deg, #fdfdfd 0%, #f4f7f6 100%);
-            padding: 40px 0;
+            position: relative;
+            background-color: #ffffff;
+            background-image: linear-gradient(120deg, #fdfdfd 0%, #f4f7f6 100%);
+            overflow: hidden;
         }
+
+        .deco-lines {
+            position: absolute;
+            width: 120px;
+            height: 80px;
+            background: repeating-linear-gradient(
+                -45deg,
+                #003399,
+                #003399 4px,
+                transparent 4px,
+                transparent 8px
+            );
+            opacity: 0.8;
+        }
+
+        .line-top { top: 10%; right: 15%; transform: rotate(15deg); }
+        .line-bottom { bottom: 5%; left: 15%; transform: rotate(-10deg); }
 
         .hero-container {
             display: flex;
             align-items: center;
             gap: 80px;
+            z-index: 2;
             max-width: 1100px;
             width: 90%;
         }
@@ -121,24 +141,19 @@
         .content p {
             font-size: 1.2rem;
             color: #999;
-            margin: 25px 0;
+            margin-bottom: 35px;
             font-style: italic;
         }
 
         .btn {
-            display: inline-block;
             background-color: #ff6600;
             color: white;
             padding: 14px 35px;
             font-weight: bold;
-            font-size: 0.9rem;
             border-radius: 4px;
             text-transform: uppercase;
             letter-spacing: 1px;
-        }
-
-        .btn:hover {
-            background-color: #e65c00;
+            display: inline-block;
         }
 
         /* HAKKIMIZDA */
@@ -162,16 +177,14 @@
 
         .about-text p {
             font-size: 1.1rem;
-            color: #666;
             line-height: 1.7;
             margin-bottom: 30px;
         }
 
         .about-image img {
-            width: 100%;
             max-width: 500px;
+            width: 100%;
             border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
         }
 
         /* PROJELER */
@@ -195,10 +208,9 @@
         .project-card {
             background: white;
             border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
             overflow: hidden;
             text-align: center;
-            transition: 0.3s;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
         }
 
         .project-card img {
@@ -207,26 +219,13 @@
             object-fit: cover;
         }
 
-        .project-card h3 {
-            margin: 20px 0 10px;
-        }
-
-        .project-card p {
-            margin-bottom: 20px;
-            color: #666;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        /* ===== SADECE MOBİL UYUMLULUK ===== */
-        @media (max-width: 768px) {
+        /* MOBİL DÜZELTMELER */
+        @media (max-width: 600px) {
 
             header {
                 flex-direction: column;
-                gap: 12px;
                 padding: 15px 5%;
+                gap: 15px;
             }
 
             nav ul {
@@ -236,21 +235,19 @@
             }
 
             .hero {
-                min-height: auto;
+                height: auto;
+                padding: 60px 0;
             }
 
             .hero-container {
                 flex-direction: column;
                 text-align: center;
-                gap: 30px;
-            }
-
-            .logo-card {
-                padding: 25px;
+                gap: 40px;
+                padding: 0 5%;
             }
 
             .logo-card img {
-                width: 180px;
+                width: 200px;
             }
 
             .content h1 {
@@ -258,17 +255,12 @@
             }
 
             .content h2 {
-                font-size: 1.2rem;
+                font-size: 1.4rem;
                 letter-spacing: 3px;
             }
 
             .content p {
                 font-size: 1rem;
-            }
-
-            .btn {
-                padding: 12px 28px;
-                font-size: 0.8rem;
             }
 
             .about {
@@ -278,7 +270,6 @@
             .about-container {
                 flex-direction: column;
                 text-align: center;
-                gap: 40px;
             }
 
             .projects {
@@ -287,11 +278,6 @@
 
             .projects-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .project-card img {
-                height: 180px;
             }
         }
     </style>
@@ -301,7 +287,7 @@
 
 <header>
     <div class="nav-logo">
-        <img src="logo1.png" alt="Fırat İnşaat Logo">
+        <img src="logo1.png">
         <span>FIRAT İNŞAAT</span>
     </div>
     <nav>
@@ -317,52 +303,13 @@
 <section class="hero">
     <div class="hero-container">
         <div class="logo-card">
-            <img src="logo1.png" alt="Fırat İnşaat">
+            <img src="logo1.png">
         </div>
         <div class="content">
             <h1>FIRAT İNŞAAT</h1>
             <h2>İNŞAAT</h2>
             <p>Geleceği Güvenle İnşa Ediyoruz</p>
             <a href="projelerimiz.html" class="btn">Projeleri Keşfet</a>
-        </div>
-    </div>
-</section>
-
-<section class="about">
-    <div class="about-container">
-        <div class="about-text">
-            <h2>Hakkımızda</h2>
-            <p>
-                Fırat İnşaat olarak, yılların tecrübesi ve modern mimari anlayışımızla
-                geleceği inşa ediyoruz.
-            </p>
-            <a href="hakkimizda.html" class="btn">Daha Fazla</a>
-        </div>
-        <div class="about-image">
-            <img src="about.jpg">
-        </div>
-    </div>
-</section>
-
-<section class="projects">
-    <div class="projects-container">
-        <h2>Projelerimiz</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="project1.jpg">
-                <h3>Proje 1</h3>
-                <p>Açıklama</p>
-            </div>
-            <div class="project-card">
-                <img src="project2.jpg">
-                <h3>Proje 2</h3>
-                <p>Açıklama</p>
-            </div>
-            <div class="project-card">
-                <img src="project3.jpg">
-                <h3>Proje 3</h3>
-                <p>Açıklama</p>
-            </div>
         </div>
     </div>
 </section>
