@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo1.png">
+    <link rel="manifest" href="logo1.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Fırat İnşaat | İletişim</title>
+    <style>
+        /* GENEL AYARLAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+        header {
+            background: white;
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo img {
+            height: 35px;
+        }
+
+        .nav-logo span {
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: #222;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        /* İLETİŞİM BÖLÜMÜ */
+        .contact {
+            padding: 80px 10%;
+            background-color: #ffffff;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        /* INSTAGRAM KISMI */
+        .social {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .social h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff6600;
+            font-size: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Mobil uyumluluk */
+        @media (max-width: 900px) {
+            .contact-container {
+                gap: 30px;
+            }
+
+            .map-container {
+                height: 300px;
+            }
+        }
+    </style>
+    <!-- Instagram icon için Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="nav-logo">
+            <img src="logo1.png" alt="Fırat İnşaat Logo">
+            <span>FIRAT İNŞAAT</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="projelerimiz.html">Projelerimiz</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- İLETİŞİM BÖLÜMÜ -->
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>İletişim</h2>
+                <p>Adres: istanbul</p>
+                <p>Telefon: +999999999999</p>
+                <p>Email: 000000000000</p>
+                <p>Bizimle sosyal medyadan da iletişime geçebilirsiniz.</p>
+            </div>
+
+            <!-- HARİTA -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!4v1770325177918!6m8!1m7!1sAFc3cCYhhBXcLG219nxU4w!2m2!1d41.00392135827349!2d29.08558387246419!3f262.3546168570854!4f-11.800746287314496!5f0.7820865974627469" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+           <!-- INSTAGRAM -->
+<div class="social">
+    <h3>Instagram</h3>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/firatyapi.insaat/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style="width:40px; height:40px;">
+        </a>
+       
+    </div>
+</div>
+
+    </section>
+
+</body>
+</html>

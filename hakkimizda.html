@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo1.png">
+    <link rel="manifest" href="logo1.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Fırat İnşaat | Hakkımızda</title>
+    <style>
+        /* GENEL AYARLAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+        header {
+            background: white;
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo img {
+            height: 35px;
+        }
+
+        .nav-logo span {
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: #222;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        /* HAKKIMIZDA STİLİ */
+        .about {
+            padding: 80px 10%;
+            background-color: #ffffff;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff6600;
+            color: white;
+            padding: 14px 35px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e65c00;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        /* Mobil uyumluluk */
+        @media (max-width: 900px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            .about-image img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="nav-logo">
+            <img src="logo1.png" alt="Fırat İnşaat Logo">
+            <span>FIRAT İNŞAAT</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="projelerimiz.html">Projelerimiz</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HAKKIMIZDA BÖLÜMÜ -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Hakkımızda</h2>
+                <p>Fırat İnşaat olarak, yılların tecrübesi ve modern mimari anlayışımızla geleceği inşa ediyoruz. Projelerimizde kalite, güven ve estetiği bir arada sunuyoruz. Amacımız, her bir müşterimize benzersiz yaşam ve iş alanları sunmaktır.</p>
+            
+            </div>
+            <div class="about-image">
+                <img src="about.jpg" alt="Hakkımızda Görseli">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

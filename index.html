@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo1.png">
+    <link rel="manifest" href="logo1.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Fırat İnşaat</title>
+    <style>
+        /* GENEL AYARLAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+        header {
+            background: white;
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo img {
+            height: 35px;
+        }
+
+        .nav-logo span {
+            font-weight: bold;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: #222;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: #ffffff;
+            background-image: linear-gradient(120deg, #fdfdfd 0%, #f4f7f6 100%);
+            overflow: hidden;
+        }
+
+        .deco-lines {
+            position: absolute;
+            width: 120px;
+            height: 80px;
+            background: repeating-linear-gradient(
+                -45deg,
+                #003399,
+                #003399 4px,
+                transparent 4px,
+                transparent 8px
+            );
+            opacity: 0.8;
+        }
+        .line-top { top: 10%; right: 15%; transform: rotate(15deg); }
+        .line-bottom { bottom: 5%; left: 15%; transform: rotate(-10deg); }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path fill="%23f0f0f0" d="M0,0 L500,200 L1000,0 L1000,1000 L0,1000 Z"/></svg>');
+            background-size: cover;
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            z-index: 2;
+            max-width: 1100px;
+            width: 90%;
+        }
+
+        .logo-card {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-card img {
+            width: 280px;
+            height: auto;
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 0;
+            letter-spacing: -1px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #888;
+            margin-bottom: 10px;
+            letter-spacing: 5px;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            color: #999;
+            margin-bottom: 35px;
+            font-style: italic;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff6600;
+            color: white;
+            padding: 14px 35px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e65c00;
+        }
+
+        /* HAKKIMIZDA */
+        .about {
+            padding: 80px 10%;
+            background-color: #ffffff;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        /* PROJELERİMİZ */
+        .projects {
+            padding: 80px 10%;
+            background-color: #f8f9fa;
+        }
+
+        .projects-container h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            margin: 20px 0 10px;
+            color: #333;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+        }
+
+        /* Mobil uyumluluk */
+        @media (max-width: 900px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .content h1 { font-size: 2.5rem; }
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="nav-logo">
+            <img src="logo1.png" alt="Fırat İnşaat Logo">
+            <span>FIRAT İNŞAAT</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="projelerimiz.html">Projelerimiz</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="deco-lines line-top"></div>
+        <div class="deco-lines line-bottom"></div>
+
+        <div class="hero-container">
+            <div class="logo-card">
+                <img src="logo1.png" alt="Fırat İnşaat">
+            </div>
+
+            <div class="content">
+                <h1>FIRAT İNŞAAT</h1>
+                <h2>İNŞAAT</h2>
+                <p>Geleceği Güvenle İnşa Ediyoruz</p>
+                <a href="projelerimiz.html" class="btn">Projeleri Keşfet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HAKKIMIZDA -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Hakkımızda</h2>
+                <p>Fırat İnşaat olarak, yılların tecrübesi ve modern mimari anlayışımızla geleceği inşa ediyoruz. Projelerimizde kalite, güven ve estetiği bir arada sunuyoruz. Amacımız, her bir müşterimize benzersiz yaşam ve iş alanları sunmaktır.</p>
+                <a href="hakkimizda.html" class="btn">Daha Fazla</a>
+            </div>
+            <div class="about-image">
+                <img src="about.jpg" alt="Hakkımızda Görseli">
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJELERİMİZ -->
+    <section class="projects">
+        <div class="projects-container">
+            <h2>Projelerimiz</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Proje 1">
+                    <h3>Mvsdgsgs</h3>
+                    <p>sggsgsgsgsgs</p>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Proje 2">
+                    <h3>mdgmlmdfgdgdgdf</h3>
+                    <p>gldl dgmd dg bdbldmb</p>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="Proje 3">
+                    <h3>ekpmgekmgekleg</h3>
+                    <p>neolgnelgjefnlgelgen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
